@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Filtro</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="check()">
+ 
+
+    <header>
+        <div class="container">
+                <h1>
+                    Gerador de Filtro
+                </h1>
+        </div>
+    </header>
+    <div id="main">
+        <div class="container py-3">
+            <div class="d-flex">
+                <div class="w-50">
+                    <div class="box p-2">
+                        <label for="" id='label_logo'>Insira a imagem de logo</label>
+                        <input type="file" name="image_logo" id="image_logo" class="form-control">
+                        <button type="submit" onclick="loadImage()" class="btn" id='btn_load'>Carregar</button>
+                        <br><hr> 
+                        
+                        <label for="" id='label_perfil'>Insira a imagem de perfil</label>
+                        <input type="file" name="image_perfil" id="image_perfil" class="form-control"><br><hr>
+                        
+                       
+                        <button type="submit" onclick="generate()" class="btn">Gerar filtro</button>
+                        <button type="submit" onclick="reset()" class="btn">Resetar</button>
+
+                        <h2>Como usar?</h2>
+                        <ol>
+                            <li>Selecione primeiramente a imagem com que irá sobrepor a imagem de perfil, ou seja, a imagem que tem fundo transparente</li>
+                            <li>Clique no botão carregar</li>
+                            <li>Selecione a imagem de perfil, essa é a sua foto de perfil</li>
+                            <li>Clique em Gerar filtro</li>
+                            <li>Se ficou do agrado, clique em Donwload para efetuar o download da foto</li>
+                            <li>Caso tenha feito algum passo errado, ou queria reiniciar, clique no botão Resetar</li>
+                        </ol>
+                        
+                    </div>
+                </div>
+                <div class="w-50">
+                    <div class="box p-2">
+                        <canvas id="canvas">
+                        </canvas>
+                        <button class="btn my-3" onclick="download()" id="download" disabled>Download</button>
+                    </div>
+                </div>
+            </div>
+            <div class="py-3"></div>
+        </div>
+    </div>
+  
+    <footer>
+        <div class="container">
+        
+        </div>
+    </footer>
+    <script src='js/script.js'>
+    </script>
+</body>
+</html>
